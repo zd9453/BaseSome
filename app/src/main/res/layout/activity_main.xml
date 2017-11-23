@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhangdong.leaning.MainActivity">
+
+    <com.zhangdong.zdbase.view.view.RoImageView
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:background="@color/colorPrimaryDark"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_world"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Hello World!" />
+
+    <TextView
+        android:onClick="gotoTestRxJava"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:onClick="toView"
+        android:text="自定义view"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="moveRcv"
+        android:text="move"
+        android:textAllCaps="false" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_group_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcv_group_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+</LinearLayout>

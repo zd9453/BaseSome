@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height"
+    android:paddingLeft="@dimen/toolbar_padding"
+    android:paddingRight="@dimen/toolbar_padding">
+
+    <ImageButton
+        android:id="@+id/tool_left_img"
+        android:layout_width="@dimen/toolbar_height"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:background="@drawable/test_pic" />
+
+    <TextView
+        android:id="@+id/tool_left_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:text="左边的文字" />
+
+    <TextView
+        android:id="@+id/tool_center_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:text="中间的title" />
+
+    <ImageButton
+        android:id="@+id/tool_right_img"
+        android:layout_width="@dimen/toolbar_height"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        tools:background="@drawable/test_pic" />
+
+    <TextView
+        android:id="@+id/tool_right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:text="右边的文字" />
+</RelativeLayout>
