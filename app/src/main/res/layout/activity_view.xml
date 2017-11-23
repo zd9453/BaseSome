@@ -11,6 +11,7 @@
     tools:context="com.zhangdong.leaning.ViewActivity">
 
     <com.zhangdong.zdbase.view.view.TestView
+        android:id="@+id/test_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </RelativeLayout>
