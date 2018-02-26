@@ -186,4 +186,9 @@ public class MainActivity extends AppCompatActivity {
     public void toView(View view) {
         startActivity(new Intent(this, ViewActivity.class));
     }
+
+    public void scroll(View view) {
+        Intent intent = new Intent(this, ScorllActivity.class);
+        startActivity(intent);
+    }
 }

@@ -79,7 +79,8 @@ public class TestView extends View {
         canvas.drawText("this is my view", 10, 150, mPaint);
 
         //中心点放射渐变
-        @SuppressLint("DrawAllocation") RadialGradient radialGradient = new RadialGradient(10 + mPaint.measureText("this is my view") / 2,
+        @SuppressLint("DrawAllocation") RadialGradient radialGradient = new RadialGradient(
+                10 + mPaint.measureText("this is my view") / 2,
                 200,
                 mPaint.measureText("this is my view") / 2,
                 Color.RED,
@@ -90,12 +91,14 @@ public class TestView extends View {
 
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.test_pic);
 
-        int width = bitmap.getWidth();
-        int height = bitmap.getHeight();
+        int width = getWidth();
+        int height = getHeight();
         int cR = Math.min(width, height);
         BitmapShader bitmapShader = new BitmapShader(bitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
 
         mPaint.setShader(bitmapShader);
-        canvas.drawCircle(cR, cR, cR, mPaint);
+        canvas.drawCircle(cR / 2, getHeight() - cR / 2, cR / 2, mPaint);
+        bitmap.recycle();
+        bitmapShader = null;
     }
 }
